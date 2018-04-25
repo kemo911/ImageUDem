@@ -61,6 +61,7 @@ $(".submit").on('click',function () {
         },
         success: function (data) {
             alert(data.status);
+            $('#myModal').modal('toggle');
         }
     })
 })

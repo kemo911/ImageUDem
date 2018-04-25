@@ -31,7 +31,7 @@
             <div class="col-md-6" style="padding: 0px;">
                 <div id="out-container" class="container-fluid" style="width: 100%; height: 100% ;display: table;">
                     <div class="row" style="height: 100%;display: table-row;">
-                        <div class="col-md-12" style="display: table-cell;float: none;vertical-align: middle;">
+                        <div class="col-md-12" style="display: table-cell;x float: none;vertical-align: middle;">
                             <div align="center">
                                 <div id="upload-demo" style="width:250px;"></div><br>
                                 <input style="width: 50%;" type="file" id="upload"><br><br>
