@@ -11,9 +11,20 @@
 |
 */
 
+Route::get('/test',['uses'=>'ImagesController@test']);
+
+
 Route::get('/home',['uses'=>'ImagesController@index','as'=>'home']);
 
 Route::post('/saveImg',['uses'=>'ImagesController@SubmitDate']);
+
+Route::post('/request',['uses'=>'ImagesController@request']);
+
+
+Route::get('/getRequests',['uses'=>'ImagesController@getRequests']);
+
+
+Route::get('/action/{id}/{status}',['uses'=>'ImagesController@action']);
 
 
 

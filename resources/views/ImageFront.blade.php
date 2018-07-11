@@ -11,17 +11,16 @@
     <style>
         html{
             height: 100%;
-            background-color: white;
         }
         .croppie-container {
             padding: 0px;
         }
         #out-container{
-            background: linear-gradient(#d0d0d1, white);
+            background: linear-gradient(#d0d0d1, #efefef);
         }
     </style>
 </head>
-    <body style="font-family: 'Montserrat', sans-serif; height: 100%">
+    <body style="font-family: 'Montserrat', sans-serif; height: 100% ; background-color: #efefef;">
     <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
     <input type="hidden" id="default_pic" value="{{$png_url}}">
     <div class="container-fluid" style="height: 100%">
@@ -36,7 +35,7 @@
                                 <div id="upload-demo" style="width:250px;"></div><br>
                                 <input style="width: 50%;" type="file" id="upload"><br><br>
                                 <input style="width: 50%;" class="form-control" type="number" value="{{$user}}" disabled id="ref" placeholder="Reference number"><br>
-                                <button style="width: 50%;" class="btn btn-success btn-block upload-result">Update</button><br>
+                                <button style="width: 50%;" class="btn btn-success btn-block upload-result" @if($status == 1) disabled @endif > @if($status == 1) Pending Request @else Update @endif</button><br>
                             </div>
                         </div>
                     </div>
@@ -77,6 +76,7 @@
             </div>
         </div>
     </div>
+
     </body>
 
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>

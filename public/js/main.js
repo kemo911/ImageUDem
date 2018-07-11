@@ -45,6 +45,8 @@ $('.upload-result').on('click', function (ev) {
             html = '<img id="last_photo" src="' + resp + '" style="width: 130px; height:180px;" />';
             $(".confirm_photo").html(html);
             $("#myModal").modal();
+
+            document.getElementsByName('').attr
         });
     }
 });
@@ -52,7 +54,7 @@ $('.upload-result').on('click', function (ev) {
 $(".submit").on('click',function () {
     $.ajax({
         type: "POST",
-        url: "/saveImg",
+        url: "/request",
         dataType: "json",
         data: {
             'img': $('#last_photo').attr('src'),
@@ -62,6 +64,8 @@ $(".submit").on('click',function () {
         success: function (data) {
             alert(data.status);
             $('#myModal').modal('toggle');
+            $(".upload-result").text("Request Pending");
+            $(".upload-result").attr("disabled","disabled");
         }
     })
 })
